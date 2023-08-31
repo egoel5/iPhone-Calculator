@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">C323_Project1</string>
+    <string name="initial_num">0</string>
+    <string name="buttonC">C</string>
+    <string name="buttonFlipSign">+/-</string>
+    <string name="buttonPercent">%</string>
+    <string name="buttonSlash">/</string>
+    <string name="buttonMultiply">X</string>
+    <string name="buttonSubtract">-</string>
+    <string name="buttonAdd">+</string>
+    <string name="buttonEquals">=</string>
+    <string name="buttonPoint">.</string>
+    <string name="buttonSeven">7</string>
+    <string name="buttonEight">8</string>
+    <string name="buttonNine">9</string>
+    <string name="buttonFour">4</string>
+    <string name="buttonFive">5</string>
+    <string name="buttonSix">6</string>
+    <string name="buttonOne">1</string>
+    <string name="buttonTwo">2</string>
+    <string name="buttonThree">3</string>
+    <string name="buttonZero">0</string>
+    <string name="num1"></string>
+    <string name="num2"></string>
+
 </resources>
