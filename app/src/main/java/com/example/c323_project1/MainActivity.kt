@@ -69,7 +69,6 @@ class MainActivity : AppCompatActivity() {
         val buSelect = view as Button
         var buValue: String = tvNumber.text.toString()
 
-
         when (buSelect.id) {
             but0.id -> {
                 buValue += "0"
