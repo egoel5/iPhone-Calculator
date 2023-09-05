@@ -128,8 +128,11 @@ class MainActivity : AppCompatActivity() {
 
     fun flipSign(view: View) {
         val numSign: Double = tvNumber.text.toString().toDouble() * -1
-        tvNumber.setText(numSign.toString())
         finalNumber = numSign
+        val df = DecimalFormat("#.#######")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
     }
 
     fun OpEvent(view: View) {
@@ -195,7 +198,10 @@ class MainActivity : AppCompatActivity() {
     {
         val number:Double = tvNumber.text.toString().toDouble() / 100
         finalNumber = number
-        tvNumber.setText(number.toString())
+        val df = DecimalFormat("#.#######")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
         dec = 1
         newOp = true
     }
