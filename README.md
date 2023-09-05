@@ -1,15 +1,13 @@
-# Project Name
+# iPhone Style Calculator
 
-Description of the project ...
+This project consists of an iPhone-style calculator. It has the same buttons and overall feel and the same functionality as the iPhone calculator, except that it is an Android app rather than an iOS app. It has all 10 number buttons, as well as buttons for clearing the screen, flipping the sign of the current number, getting the percent value of the current number, division, multiplication, subtraction, and addition. 
 
 ## Functionality 
 
 The following **required** functionality is completed:
 
-* [ ] User sees ...
-* [ ] User can ...
-* [ ] ...
-* [ ] ...
+* [✅] User sees all 15 buttons that are required for the basic calculator layout
+* [✅] User can utilize all 15 buttons and receive accurate, formatted answers
 
 The following **extensions** are implemented:
 
@@ -26,11 +24,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One of the main challenges I had when I created my app was that it would crash whenever I opened it. The cause of this error was that I was initializing my references to the layout before onCreate, which resulted in a NullPointerException. I simply set every reference to a lateinit and then initialized them inside my onCreate function, which fixed the issue.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Eshan Goel]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
