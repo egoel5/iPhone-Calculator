@@ -11,7 +11,7 @@ The following **required** functionality is completed:
 
 ## Video Walkthrough
 
-<img src='[walkthrough.gif](https://im.ezgif.com/tmp/ezgif-1-0338ba09af.gif)' title='Video Walkthrough' width='50%' alt='Video Walkthrough' />
+<img src='[Walkthrough](https://im.ezgif.com/tmp/ezgif-1-0338ba09af.gif)' title='Video Walkthrough' width='50%' alt='Video Walkthrough'/>
 
 ## Notes
 
