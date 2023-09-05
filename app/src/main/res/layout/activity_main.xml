@@ -27,6 +27,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonC"
+            android:onClick="clearText"
             android:textSize="30sp"></Button>
 
         <Button
@@ -36,6 +37,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonFlipSign"
+            android:onClick="flipSign"
             android:textSize="30sp"></Button>
 
         <Button
@@ -45,6 +47,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonPercent"
+            android:onClick="butPercent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -54,6 +57,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonSlash"
+            android:onClick="OpEvent"
             android:textSize="30sp"></Button>
 
     </LinearLayout>
@@ -70,6 +74,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonSeven"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -79,6 +84,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonEight"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -88,6 +94,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonNine"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -97,6 +104,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonMultiply"
+            android:onClick="OpEvent"
             android:textSize="30sp"></Button>
 
     </LinearLayout>
@@ -113,6 +121,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonFour"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -122,6 +131,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonFive"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -131,6 +141,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonSix"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -140,6 +151,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonSubtract"
+            android:onClick="OpEvent"
             android:textSize="30sp"></Button>
 
     </LinearLayout>
@@ -156,6 +168,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonOne"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -165,6 +178,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonTwo"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -174,6 +188,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonThree"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -183,6 +198,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonAdd"
+            android:onClick="OpEvent"
             android:textSize="30sp"></Button>
 
     </LinearLayout>
@@ -199,6 +215,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonZero"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
 
@@ -209,6 +226,7 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonPoint"
+            android:onClick="NumberEvent"
             android:textSize="30sp"></Button>
 
         <Button
@@ -218,11 +236,8 @@
             android:layout_height="110dp"
             android:layout_margin="2dp"
             android:text="@string/buttonEquals"
+            android:onClick="butEquals"
             android:textSize="30sp"></Button>
 
     </LinearLayout>
-
-
-
-
 </LinearLayout>
