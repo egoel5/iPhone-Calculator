@@ -11,7 +11,7 @@ The following **required** functionality is completed:
 
 ## Video Walkthrough
 
-<img src='[Walkthrough](https://github.com/egoel5/C323_Project1/blob/master/ezgif.com-video-to-gif.gif)' title='Video Walkthrough' width='50%' alt='Video Walkthrough'/>
+![Walkthrough](https://github.com/egoel5/C323_Project1/blob/master/ezgif.com-video-to-gif.gif)
 
 ## Notes
 
