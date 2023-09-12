@@ -9,6 +9,10 @@ The following **required** functionality is completed:
 * [✅] User sees all 15 buttons that are required for the basic calculator layout
 * [✅] User can utilize all 15 buttons and receive accurate, formatted answers
 
+The following **extensions** are implemented:
+
+N/A
+
 ## Video Walkthrough
 
 ![Walkthrough](https://github.com/egoel5/C323_Project1/blob/master/Running%20Devices%20-%20C323_Project1%202023-09-04%2022-18-24.gif)
