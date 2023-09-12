@@ -23,42 +23,42 @@
         <Button
             android:id="@+id/buttonC"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonC"
             android:onClick="clearText"
-            android:textSize="30sp"></Button>
+            android:textSize="60sp"></Button>
 
         <Button
             android:id="@+id/buttonFlipSign"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonFlipSign"
             android:onClick="flipSign"
-            android:textSize="30sp"></Button>
+            android:textSize="60sp"></Button>
 
         <Button
             android:id="@+id/buttonPercent"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
-            android:text="@string/buttonPercent"
             android:onClick="butPercent"
-            android:textSize="30sp"></Button>
+            android:text="@string/buttonPercent"
+            android:textSize="60sp"></Button>
 
         <Button
             android:id="@+id/buttonSlash"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonSlash"
             android:onClick="OpEvent"
-            android:textSize="30sp"></Button>
+            android:textSize="60sp"></Button>
 
     </LinearLayout>
 
@@ -70,42 +70,42 @@
         <Button
             android:id="@+id/button7"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonSeven"
             android:onClick="NumberEvent"
-            android:textSize="30sp"></Button>
+            android:textSize="70sp"></Button>
 
         <Button
             android:id="@+id/button8"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonEight"
             android:onClick="NumberEvent"
-            android:textSize="30sp"></Button>
+            android:textSize="70sp"></Button>
 
         <Button
             android:id="@+id/button9"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonNine"
             android:onClick="NumberEvent"
-            android:textSize="30sp"></Button>
+            android:textSize="70sp"></Button>
 
         <Button
             android:id="@+id/buttonMultiply"
             style="@style/Widget.AppCompat.Button"
-            android:layout_width="100dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="2dp"
             android:text="@string/buttonMultiply"
             android:onClick="OpEvent"
-            android:textSize="30sp"></Button>
+            android:textSize="70sp"></Button>
 
     </LinearLayout>
 
