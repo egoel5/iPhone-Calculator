@@ -197,7 +197,7 @@ class MainActivity : AppCompatActivity() {
     {
         val number:Double = tvNumber.text.toString().toDouble() / 100
         finalNumber = number
-        val df = DecimalFormat("#.#######")
+        val df = DecimalFormat("#.#####")
         df.roundingMode = RoundingMode.DOWN
         val roundedFinalNumber = df.format(finalNumber)
         tvNumber.setText(roundedFinalNumber.toString())
