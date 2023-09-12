@@ -11,7 +11,7 @@ The following **required** functionality is completed:
 
 The following **extensions** are implemented:
 
-N/A
+* N/A
 
 ## Video Walkthrough
 
