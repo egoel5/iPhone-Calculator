@@ -11,7 +11,7 @@ The following **required** functionality is completed:
 
 ## Video Walkthrough
 
-![Walkthrough](https://im.ezgif.com/tmp/ezgif-1-0338ba09af.gif)
+![Walkthrough](https://github.com/egoel5/C323_Project1/blob/master/Running%20Devices%20-%20C323_Project1%202023-09-04%2022-18-24.gif)
 
 ## Notes
 
