@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SidewaysActivity"
+    tools:context=".MainActivity"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -16,10 +16,9 @@
             android:id="@+id/tvNumber"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="50dp"
             android:text="@string/initial_num"
             android:textAlignment="textEnd"
-            android:textSize="100sp"
+            android:textSize="45sp"
             android:textStyle="bold"
             android:textColor="@color/black"></TextView>
 
@@ -37,18 +36,18 @@
                 android:layout_weight="1"
                 android:text="@string/buttonC"
                 android:onClick="clearText"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonFlipSign"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="@string/buttonFlipSign"
                 android:onClick="flipSign"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonPercent"
@@ -59,7 +58,7 @@
                 android:layout_weight="1"
                 android:onClick="butPercent"
                 android:text="@string/buttonPercent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonSlash"
@@ -70,7 +69,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonSlash"
                 android:onClick="OpEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonSin"
@@ -80,9 +79,9 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="@string/buttonSin"
-                android:onClick="flipSign"
+                android:onClick="sine"
                 android:textAllCaps="false"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
         </LinearLayout>
 
@@ -99,7 +98,7 @@
                 android:layout_weight="1"
                 android:onClick="NumberEvent"
                 android:text="@string/buttonSeven"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/button8"
@@ -110,7 +109,7 @@
                 android:onClick="NumberEvent"
                 android:layout_weight="1"
                 android:text="@string/buttonEight"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/button9"
@@ -121,7 +120,7 @@
                 android:onClick="NumberEvent"
                 android:layout_weight="1"
                 android:text="@string/buttonNine"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonMultiply"
@@ -132,7 +131,7 @@
                 android:layout_weight="1"
                 android:onClick="OpEvent"
                 android:text="@string/buttonMultiply"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonCos"
@@ -142,9 +141,9 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="@string/buttonCos"
-                android:onClick="flipSign"
+                android:onClick="cosine"
                 android:textAllCaps="false"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
         </LinearLayout>
 
@@ -162,7 +161,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonFour"
                 android:onClick="NumberEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/button5"
@@ -173,7 +172,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonFive"
                 android:onClick="NumberEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/button6"
@@ -184,7 +183,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonSix"
                 android:onClick="NumberEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonSubtract"
@@ -195,7 +194,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonSubtract"
                 android:onClick="OpEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonTan"
@@ -205,9 +204,9 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="@string/buttonTan"
-                android:onClick="flipSign"
+                android:onClick="tangent"
                 android:textAllCaps="false"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
         </LinearLayout>
 
@@ -225,7 +224,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonOne"
                 android:onClick="NumberEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/button2"
@@ -236,7 +235,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonTwo"
                 android:onClick="NumberEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/button3"
@@ -247,7 +246,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonThree"
                 android:onClick="NumberEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonAdd"
@@ -258,7 +257,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonAdd"
                 android:onClick="OpEvent"
-                android:textSize="75sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonLog"
@@ -268,9 +267,9 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="@string/buttonLog10"
-                android:onClick="flipSign"
+                android:onClick="log10"
                 android:textAllCaps="false"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
         </LinearLayout>
 
@@ -288,7 +287,7 @@
                 android:layout_weight="2"
                 android:text="@string/buttonZero"
                 android:onClick="NumberEvent"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
 
             <Button
@@ -300,7 +299,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonPoint"
                 android:onClick="NumberEvent"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonEquals"
@@ -311,7 +310,7 @@
                 android:layout_weight="1"
                 android:text="@string/buttonEquals"
                 android:onClick="butEquals"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
             <Button
                 android:id="@+id/buttonLn"
@@ -321,9 +320,9 @@
                 android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="@string/buttonLn"
-                android:onClick="flipSign"
+                android:onClick="natLog"
                 android:textAllCaps="false"
-                android:textSize="70sp"></Button>
+                android:textSize="25sp"></Button>
 
         </LinearLayout>
     </LinearLayout>

@@ -7,6 +7,11 @@ import android.widget.Button
 import android.widget.TextView
 import java.math.RoundingMode
 import java.text.DecimalFormat
+import kotlin.math.cos
+import kotlin.math.ln
+import kotlin.math.sin
+import kotlin.math.tan
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     lateinit var tvNumber:TextView
@@ -29,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var but1:Button
     lateinit var but2:Button
     lateinit var but3:Button
+
     var finalNumber = 0.0
     var op = "none"
     var oldNumber = "0"
@@ -71,42 +77,52 @@ class MainActivity : AppCompatActivity() {
 
         when (buSelect.id) {
             but0.id -> {
+                Log.v(String.toString(), "0 Button Clicked")
                 buValue += "0"
             }
 
             but1.id -> {
+                Log.v(String.toString(), "1 Button Clicked")
                 buValue += "1"
             }
 
             but2.id -> {
+                Log.v(String.toString(), "2 Button Clicked")
                 buValue += "2"
             }
 
             but3.id -> {
+                Log.v(String.toString(), "3 Button Clicked")
                 buValue += "3"
             }
 
             but4.id -> {
+                Log.v(String.toString(), "4 Button Clicked")
                 buValue += "4"
             }
 
             but5.id -> {
+                Log.v(String.toString(), "5 Button Clicked")
                 buValue += "5"
             }
 
             but6.id -> {
+                Log.v(String.toString(), "6 Button Clicked")
                 buValue += "6"
             }
 
             but7.id -> {
+                Log.v(String.toString(), "7 Button Clicked")
                 buValue += "7"
             }
 
             but8.id -> {
+                Log.v(String.toString(), "8 Button Clicked")
                 buValue += "8"
             }
 
             but9.id -> {
+                Log.v(String.toString(), "9 Button Clicked")
                 buValue += "9"
             }
 
@@ -126,6 +142,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun flipSign(view: View) {
+        Log.v(String.toString(), "Flip Sign Button Clicked")
         val numSign: Double = tvNumber.text.toString().toDouble() * -1
         finalNumber = numSign
         val df = DecimalFormat("#.#######")
@@ -138,18 +155,22 @@ class MainActivity : AppCompatActivity() {
         val butSelect = view as Button
         when (butSelect.id) {
             butMulti.id -> {
+                Log.v(String.toString(), "Multiply Button Clicked")
                 op = "*"
             }
 
             butDiv.id -> {
+                Log.v(String.toString(), "Divide Button Clicked")
                 op = "/"
             }
 
             butAdd.id -> {
+                Log.v(String.toString(), "Add Button Clicked")
                 op = "+"
             }
 
             butSub.id -> {
+                Log.v(String.toString(), "Subtract Button Clicked")
                 op = "-"
             }
         }
@@ -159,6 +180,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun butEquals(view: View) {
+        Log.v(String.toString(), "Equals Button Clicked")
         if (tvNumber.text.toString() == ".") {
             tvNumber.setText("0")
         }
@@ -180,12 +202,32 @@ class MainActivity : AppCompatActivity() {
                 finalNumber = oldNumber.toDouble() - newNumber.toDouble()
             }
 
+            "sin" -> {
+                finalNumber = sin(oldNumber.toDouble())
+            }
+
+            "cos" -> {
+                finalNumber = cos(oldNumber.toDouble())
+            }
+
+            "tan" -> {
+                finalNumber = tan(oldNumber.toDouble())
+            }
+
+            "log10" -> {
+                finalNumber = kotlin.math.log10(oldNumber.toDouble())
+            }
+
+            "natLog" -> {
+                finalNumber = ln(oldNumber.toDouble())
+            }
+
             else -> {
                 finalNumber = finalNumber
             }
         }
         op = "none"
-        val df = DecimalFormat("#.#######")
+        val df = DecimalFormat("#.#####")
         df.roundingMode = RoundingMode.DOWN
         val roundedFinalNumber = df.format(finalNumber)
         tvNumber.setText(roundedFinalNumber.toString())
@@ -195,6 +237,7 @@ class MainActivity : AppCompatActivity() {
 
     fun butPercent(view:View)
     {
+        Log.v(String.toString(), "Percent Button Clicked")
         val number:Double = tvNumber.text.toString().toDouble() / 100
         finalNumber = number
         val df = DecimalFormat("#.#####")
@@ -208,6 +251,81 @@ class MainActivity : AppCompatActivity() {
     fun clearText(view:View)
     {
         tvNumber.setText("0")
+        dec = 1
+        newOp = true
+    }
+
+    fun sine(view:View)
+    {
+        Log.v(String.toString(), "sin Button Clicked")
+        val number:Double = tvNumber.text.toString().toDouble()
+        println(number)
+        finalNumber = sin(number)
+        println(finalNumber)
+        val df = DecimalFormat("#.#####")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
+        dec = 1
+        newOp = true
+    }
+
+    fun cosine(view:View)
+    {
+        Log.v(String.toString(), "cos Button Clicked")
+        val number:Double = tvNumber.text.toString().toDouble()
+        println(number)
+        finalNumber = cos(number)
+        println(finalNumber)
+        val df = DecimalFormat("#.#####")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
+        dec = 1
+        newOp = true
+    }
+
+    fun tangent(view:View)
+    {
+        Log.v(String.toString(), "tan Button Clicked")
+        val number:Double = tvNumber.text.toString().toDouble()
+        println(number)
+        finalNumber = tan(number)
+        println(finalNumber)
+        val df = DecimalFormat("#.#####")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
+        dec = 1
+        newOp = true
+    }
+
+    fun log10(view:View)
+    {
+        Log.v(String.toString(), "log10 Button Clicked")
+        val number:Double = tvNumber.text.toString().toDouble()
+        println(number)
+        finalNumber = kotlin.math.log10(number)
+        println(finalNumber)
+        val df = DecimalFormat("#.#####")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
+        dec = 1
+        newOp = true
+    }
+
+    fun natLog(view:View)
+    {
+        Log.v(String.toString(), "ln Button Clicked")
+        val number:Double = tvNumber.text.toString().toDouble()
+        println(number)
+        finalNumber = ln(number)
+        println(finalNumber)
+        val df = DecimalFormat("#.#####")
+        df.roundingMode = RoundingMode.DOWN
+        val roundedFinalNumber = df.format(finalNumber)
+        tvNumber.setText(roundedFinalNumber.toString())
         dec = 1
         newOp = true
     }
