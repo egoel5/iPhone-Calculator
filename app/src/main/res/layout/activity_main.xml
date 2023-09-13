@@ -6,6 +6,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
+        android:id="@+id/linLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,13 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="75dp"
-            android:text="@string/initial_num"
             android:textAlignment="textEnd"
             android:textSize="100sp"
             android:textStyle="bold"
             android:textColor="@color/black"></TextView>
 
         <LinearLayout
+            android:id="@+id/linLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -73,6 +74,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -123,6 +125,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -174,6 +177,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linLayout5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -225,6 +229,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linLayout6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">

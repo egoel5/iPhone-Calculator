@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var but1:Button
     lateinit var but2:Button
     lateinit var but3:Button
-
+    var curNum = 0
     var finalNumber = 0.0
     var op = "none"
     var oldNumber = "0"
@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
         but2 = findViewById(R.id.button2)
         but3 = findViewById(R.id.button3)
     }
-
     var dec = 1
     fun NumberEvent(view: View) {
         if (newOp) {
@@ -250,6 +249,7 @@ class MainActivity : AppCompatActivity() {
 
     fun clearText(view:View)
     {
+        Log.v(String.toString(), "Clear Button Clicked")
         tvNumber.setText("0")
         dec = 1
         newOp = true
@@ -315,10 +315,9 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
-    fun natLog(view:View)
-    {
+    fun natLog(view:View) {
         Log.v(String.toString(), "ln Button Clicked")
-        val number:Double = tvNumber.text.toString().toDouble()
+        val number: Double = tvNumber.text.toString().toDouble()
         println(number)
         finalNumber = ln(number)
         println(finalNumber)
@@ -328,5 +327,16 @@ class MainActivity : AppCompatActivity() {
         tvNumber.setText(roundedFinalNumber.toString())
         dec = 1
         newOp = true
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("curNum", tvNumber.text.toString().toInt())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        curNum = savedInstanceState!!.getInt("curNum")
+        tvNumber.setText(curNum.toString())
     }
 }
