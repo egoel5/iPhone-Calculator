@@ -66,6 +66,12 @@ class MainActivity : AppCompatActivity() {
         but3 = findViewById(R.id.button3)
     }
     var dec = 1
+
+    /**
+     * This method handles all number button clicks. It identifies
+     * which number has been selected, prints to log the button value,
+     * and then adds it to a var buValue that then populates the TextView
+     */
     fun NumberEvent(view: View) {
         if (newOp) {
             tvNumber.setText("")
@@ -141,16 +147,27 @@ class MainActivity : AppCompatActivity() {
         finalNumber = buValue.toDouble()
     }
 
+    /**
+     * This method handles the flip sign button. It gets the string value
+     * of the TextView and then multiplies it by -1 and sets the TextView
+     * text to the new number.
+     */
     fun flipSign(view: View) {
         Log.v(String.toString(), "Flip Sign Button Clicked")
         val numSign: Double = tvNumber.text.toString().toDouble() * -1
         finalNumber = numSign
-        val df = DecimalFormat("#.#######")
-        df.roundingMode = RoundingMode.DOWN
-        val roundedFinalNumber = df.format(finalNumber)
-        tvNumber.setText(roundedFinalNumber.toString())
+        tvNumber.setText(finalNumber.toString())
     }
 
+    /**
+     * This method handles all the operation events on the calculator.
+     * First, it sees if the boolean mip is true, if true, it does the
+     * appropriate operation onto the number and prints it in case
+     * of a complex equation with multiple operations back to back.
+     * If mip is false, it simply sets the var op equal to the string value
+     * of whatever operation must be done. At the end of the function, mip is set
+     * to true to indicate that math is in progress.
+     */
     fun OpEvent(view: View) {
         val butSelect = view as Button
         if (mip) {
@@ -227,6 +244,11 @@ class MainActivity : AppCompatActivity() {
         mip = true
     }
 
+    /**
+     * This method handles the equals button. It identifies the value of the
+     * var op and does that operation on the necessary values. It then formats the
+     * values and prints them.
+     */
     fun butEquals(view: View) {
         Log.v(String.toString(), "Equals Button Clicked")
         if (tvNumber.text.toString() == ".") {
@@ -283,6 +305,11 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
+    /**
+     * This method simply takes the value of the TextView, divides it
+     * by 100 and then after formatting, sets the TextView text to
+     * the percentage value.
+     */
     fun butPercent(view:View)
     {
         Log.v(String.toString(), "Percent Button Clicked")
@@ -296,14 +323,23 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
+    /**
+     * This method simply clears the TextView and sets mip to false
+     */
     fun clearText(view:View)
     {
         Log.v(String.toString(), "Clear Button Clicked")
         tvNumber.setText("0")
         dec = 1
         newOp = true
+        mip = false
     }
 
+    /**
+     * This method does the kotlin sin method onto the TextView text
+     * parsed to an Int, then parses the new value back into a String
+     * and sets TextView to it
+     */
     fun sine(view:View)
     {
         Log.v(String.toString(), "sin Button Clicked")
@@ -319,6 +355,11 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
+    /**
+     * This method does the kotlin cosine method onto the TextView text
+     * parsed to an Int, then parses the new value back into a String
+     * and sets TextView to it
+     */
     fun cosine(view:View)
     {
         Log.v(String.toString(), "cos Button Clicked")
@@ -334,6 +375,11 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
+    /**
+     * This method does the kotlin tangent method onto the TextView text
+     * parsed to an Int, then parses the new value back into a String
+     * and sets TextView to it
+     */
     fun tangent(view:View)
     {
         Log.v(String.toString(), "tan Button Clicked")
@@ -349,6 +395,11 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
+    /**
+     * This method does the kotlin log10 method onto the TextView text
+     * parsed to an Int, then parses the new value back into a String
+     * and sets TextView to it
+     */
     fun log10(view:View)
     {
         Log.v(String.toString(), "log10 Button Clicked")
@@ -364,6 +415,11 @@ class MainActivity : AppCompatActivity() {
         newOp = true
     }
 
+    /**
+     * This method does the kotlin natural log method onto the TextView text
+     * parsed to an Int, then parses the new value back into a String
+     * and sets TextView to it
+     */
     fun natLog(view:View) {
         Log.v(String.toString(), "ln Button Clicked")
         val number: Double = tvNumber.text.toString().toDouble()
