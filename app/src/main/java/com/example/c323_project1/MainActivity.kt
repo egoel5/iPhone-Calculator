@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
     var op = "none"
     var oldNumber = "0"
     var newOp = true
+    var mip = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -152,30 +153,78 @@ class MainActivity : AppCompatActivity() {
 
     fun OpEvent(view: View) {
         val butSelect = view as Button
-        when (butSelect.id) {
-            butMulti.id -> {
-                Log.v(String.toString(), "Multiply Button Clicked")
-                op = "*"
-            }
+        if (mip) {
+            val newNumber = tvNumber.text.toString()
+            when (op) {
+                "*" -> {
+                    finalNumber = oldNumber.toDouble() * newNumber.toDouble()
+                }
 
-            butDiv.id -> {
-                Log.v(String.toString(), "Divide Button Clicked")
-                op = "/"
-            }
+                "/" -> {
+                    finalNumber = oldNumber.toDouble() / newNumber.toDouble()
+                }
 
-            butAdd.id -> {
-                Log.v(String.toString(), "Add Button Clicked")
-                op = "+"
-            }
+                "+" -> {
+                    finalNumber = oldNumber.toDouble() + newNumber.toDouble()
+                }
 
-            butSub.id -> {
-                Log.v(String.toString(), "Subtract Button Clicked")
-                op = "-"
+                "-" -> {
+                    finalNumber = oldNumber.toDouble() - newNumber.toDouble()
+                }
+
+                "sin" -> {
+                    finalNumber = sin(oldNumber.toDouble())
+                }
+
+                "cos" -> {
+                    finalNumber = cos(oldNumber.toDouble())
+                }
+
+                "tan" -> {
+                    finalNumber = tan(oldNumber.toDouble())
+                }
+
+                "log10" -> {
+                    finalNumber = kotlin.math.log10(oldNumber.toDouble())
+                }
+
+                "natLog" -> {
+                    finalNumber = ln(oldNumber.toDouble())
+                }
             }
+            op = "none"
+            val df = DecimalFormat("#.#####")
+            df.roundingMode = RoundingMode.DOWN
+            val roundedFinalNumber = df.format(finalNumber)
+            tvNumber.setText(roundedFinalNumber.toString())
+            dec = 1
+            newOp = true
         }
+            when (butSelect.id) {
+                butMulti.id -> {
+                    Log.v(String.toString(), "Multiply Button Clicked")
+                    op = "*"
+                }
+
+                butDiv.id -> {
+                    Log.v(String.toString(), "Divide Button Clicked")
+                    op = "/"
+                }
+
+                butAdd.id -> {
+                    Log.v(String.toString(), "Add Button Clicked")
+                    op = "+"
+                }
+
+                butSub.id -> {
+                    Log.v(String.toString(), "Subtract Button Clicked")
+                    op = "-"
+                }
+            }
         oldNumber = tvNumber.text.toString()
         newOp = true
         dec = 1
+        mip = true
     }
 
     fun butEquals(view: View) {
