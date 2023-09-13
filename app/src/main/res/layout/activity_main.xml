@@ -19,6 +19,7 @@
             android:paddingBottom="75dp"
             android:textAlignment="textEnd"
             android:textSize="100sp"
+            android:text = "@string/initial_num"
             android:textStyle="bold"
             android:textColor="@color/black"></TextView>
 
